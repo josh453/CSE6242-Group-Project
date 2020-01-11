@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <title>Stack Overflow Visualized</title>
+  <link rel="stylesheet" type="text/css" href="../css/forcedirected.css"/>
+
+  <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+  <!--Make sure the form has the autocomplete function switched off:-->
+
+  
+
+  <div id="titleheader", style="line-height: 10%;">
+      <h3 align="center">Stack Overflow Visualized</h3>
+      <p id="status", style="text-align:center;font-size:12px;"> System Status: Awaiting user action</p>
+      <p id="queries_remaining", style="text-align:center;font-size:12px;"> Queries remaining: (Will populate after first successful query.)</p>
+    </div>
+  
+    <form autocomplete="off" action="/action_page.php"></form>
+      <div id="searchdiv">
+        <input type="text" id="searchbar" placeholder="Search question">
+      </div>
+      <div id="toggleButton" class="freezeButton">
+          <button type="button"  id="freezeMe">Toggle Freeze/Unfreeze Graph</button> 
+      </div>
+
+    </form>
+  
+    <div id="howto", class="right">
+        <h3 align="center">How-to Guide</h3>
+        <ol class="list">
+          <li>First and foremost, please respect the quota limit.  Please limit yourself to about 1000 queries.</li>
+          <li>Type a question in the search box and hit enter.</li>
+            <ul>
+           <li> Question must contain at least 3 words and 10 or more characters.</li>
+          </ul>
+          <li>Hover over nodes to see question titles.</li>
+          <li>Control-click on nodes to navigate to that question on SO.</li>
+          <li>Double-click on nodes to search for that question.</li>
+          <li>Node numbers indicate relevance to search query.</li>
+          <li>Node colors indicate question communities.</li>
+        </ol>
+      </div>
+  </head>
+  <body>
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/lib/d3.v5.min.js"></script>
+  <script type="text/javascript" src="../js/lib/d3-tip.min.js"></script>
+  <script type="text/javascript" src="../js/StackOverFlowQuery.js"></script>
+  <script type="text/javascript" src="../js/Utils.js"></script>
+  <script type="text/javascript" src="../js/Index.js"></script>
+  <script type="module" src="../js/EditDistanceAndPageRank.js"></script>
+  <script type="text/javascript" src="../js/ForceDirected.js"></script>
+  <script type="text/javascript" src="../js/jLouvain.js"></script>
+
+
+
+
+</body>
+</html>
